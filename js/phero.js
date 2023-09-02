@@ -6,3 +6,11 @@ function onToggleMenu(e){
     //menuItems.classList.toggle('top-[25%]');
     menuItems.classList.toggle('top-[25%]');
 }
+
+const handleHomeBtn = () =>{
+    window.location.href = "index.html";
+}
+
+const handleBlogBtn = () =>{
+    window.location.href = "blog.html";
+}

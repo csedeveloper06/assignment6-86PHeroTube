@@ -60,7 +60,7 @@
                     <h1 class="text-3xl font-bold"><span class="text-primaryColor">PH</span>Tube</h1>
                 </div>
                 <button class="btn btn-active btn-ghost hidden lg:flex">Sort By View</button>
-                <button class="btn bg-primaryColor text-white hidden lg:flex">Blog</button>
+                <button onclick="handleBlogBtn()" class="btn bg-primaryColor text-white hidden lg:flex">Blog</button>
                 <li class="relative list-none lg:hidden">
                     <ion-icon onclick="onToggleMenu(this)" name ="menu" class="text-3xl"></ion-icon>
                 </li>
@@ -68,7 +68,7 @@
                      flex flex-col justify-center items-center gap-5 top-[-100%] p-8 lg:hidden">
                     <button class="bg-secondaryColor text-center font-semibold 
                         p-3 text-lg w-[200px] h-[5%] rounded-xl">Search By View</button>
-                    <button class="bg-primaryColor text-center text-white font-semibold 
+                    <button onclick="handleBlogBtn()" class="bg-primaryColor text-center text-white font-semibold 
                         text-lg p-3 w-[200px] h-[5%] rounded-xl">Blog</button>
                 </div>
             </div>

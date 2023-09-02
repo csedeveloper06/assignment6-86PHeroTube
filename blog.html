@@ -21,6 +21,21 @@
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+     <!-- customize tailwindCss color -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                primaryColor: '#FF1F3D',
+                secondaryColor: '#25252533'
+              }
+            }
+          }
+        }
+      </script>
+
      <style>
         .font{
             font-family: 'Inter', sans-serif;
@@ -29,33 +44,98 @@
 
 </head>
 <body>
+    <header class="p-16">
+        <nav class="flex justify-center items-center gap-5">
+            <div class="logo flex justify-center items-center gap-3">
+                <div class="playIcon h-10 w-10 rounded-full flex justify-center items-center bg-primaryColor
+                    text-xl text-white"><i class="fa-solid fa-play"></i>
+                </div>
+                <h1 class="text-3xl font-bold"><span class="text-primaryColor">PH</span>Tube</h1>
+            </div>
+            <button onclick="handleHomeBtn()" class="btn bg-primaryColor text-white lg:flex">Home</button>
+        </nav>
+    </header>
+   <main class="container mx-auto flex flex-col justify-center items-center gap-5">
     <div class="collapse bg-base-200">
         <input type="radio" name="my-accordion-1" checked="checked" /> 
-        <div class="collapse-title text-xl font-medium">
-          Click to open this one and close others
+        <div class="collapse-title text-2xl font-medium">
+          Discuss the scope of var, let and const
         </div>
         <div class="collapse-content"> 
-          <p>hello</p>
+          <div>
+            <h2 class="text-xl font-semibold">Var :</h2>
+            <p>
+                The scope of a variable declared with var is one of the following curly-brace-enclosed syntaxes that most closely contains the var statement: Function body. Static initialization block
+            </p>
+            <h2 class="text-xl font-semibold">let:</h2>
+            <p>
+                let declarations are scoped to blocks as well as functions. let declarations can only be accessed after the line of declaration is reached (see temporal dead zone). For this reason, let declarations are commonly regarded as non-hoisted.
+            </p>
+            <h2 class="text-xl font-semibold">const:</h2>
+            <p>
+                const declarations are scoped to blocks as well as functions. const declarations can only be accessed after the line of declaration is reached (see temporal dead zone). For this reason, const declarations are commonly regarded as non-hoisted.
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="collapse bg-base-200">
+    </div>
+    <div class="collapse bg-base-200">
         <input type="radio" name="my-accordion-1" /> 
         <div class="collapse-title text-xl font-medium">
-          Click to open this one and close others
+            Tell us the use cases of null and undefined
         </div>
         <div class="collapse-content"> 
-          <p>hello</p>
+           <div>
+                <h2 class="text-xl font-semibold">
+                    null :
+                </h2>
+                <p>
+                    <ul>
+                        <li>Initialization</li>
+                        <li>Database Records</li>
+                        <li>Default Values</li>
+                        <li>Conditional Logic</li>
+                        <li>Optional Values</li>
+                        <li>Error Handling</li>
+                        <li>Data Transformation</li>
+                        <li>Placeholder</li>
+                        <li>UI Elements</li>
+                        <li>Memory Management</li>
+                    </ul>
+                </p>
+            </div>
+            <div>
+                <h2 class="text-xl font-semibold">
+                    undefined:
+                </h2>
+                <p>
+                    <ul>
+                        <li>Variable Initialization</li>
+                        <li>Function Return Values</li>
+                        <li>Object Properties</li>
+                        <li>Array Elements</li>
+                        <li>Parameter Values</li>
+                        <li>Error Handling</li>
+                        <li>Promise Resolution</li>
+                        <li>Type Conversion</li>
+                        <li>Testing and Debugging</li>
+                        <li>Default Values</li>
+                    </ul>
+                </p>
+            </div>
         </div>
-      </div>
-      <div class="collapse bg-base-200">
+    </div>
+    <div class="collapse bg-base-200">
         <input type="radio" name="my-accordion-1" /> 
         <div class="collapse-title text-xl font-medium">
-          Click to open this one and close others
+            REST API
         </div>
         <div class="collapse-content"> 
-          <p>hello</p>
+          <p>
+            A REST (Representational State Transfer) API is a set of rules and conventions for designing and interacting with web services or web resources. It is based on the principles of simplicity, scalability, and statelessness, making it a popular choice for building web applications and services.
+          </p>
         </div>
-      </div>
+    </div>
+   </main>
     <script src="js/phero.js"></script>
 </body>
 </html>
