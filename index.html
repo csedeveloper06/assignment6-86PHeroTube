@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHero Tube</title>
 
+    <!-- ionIcon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
     <!-- daisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" 
         rel="stylesheet" type="text/css" />
@@ -19,15 +24,58 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" 
+        rel="stylesheet">
+
+
+    <!-- customize tailwindCss color -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                primaryColor: '#FF1F3D',
+                secondaryColor: '#25252533'
+              }
+            }
+          }
+        }
+      </script>
 
     <style>
-        .font{
+        .allFont{
             font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
-<body>
-    <h1>Hello PHero Tube</h1>
+<body class="allFont">
+    <header class="h-screen">
+        <nav class="container mx-auto px-5">
+            <div class="bg-base-100 flex justify-between items-center py-8">
+                <div class="logo flex justify-center items-center gap-3">
+                    <div class="playIcon h-10 w-10 rounded-full flex justify-center items-center bg-primaryColor
+                        text-xl text-white"><i class="fa-solid fa-play"></i>
+                    </div>
+                    <h1 class="text-3xl font-bold"><span class="text-primaryColor">PH</span>Tube</h1>
+                </div>
+                <button class="btn btn-active btn-ghost hidden lg:flex">Sort By View</button>
+                <button class="btn bg-primaryColor text-white hidden lg:flex">Blog</button>
+                <li class="relative list-none lg:hidden">
+                    <ion-icon onclick="onToggleMenu(this)" name ="menu" class="text-3xl"></ion-icon>
+                </li>
+                <div class="toggle-menu-items absolute left-0 bg-green-200 text-black w-full min-v-h-[60vh]
+                     flex flex-col justify-center items-center gap-5 top-[-100%] p-8 lg:hidden">
+                    <button class="bg-secondaryColor text-center font-semibold 
+                        p-3 text-lg w-[200px] h-[5%] rounded-xl">Search By View</button>
+                    <button class="bg-primaryColor text-center text-white font-semibold 
+                        text-lg p-3 w-[200px] h-[5%] rounded-xl">Blog</button>
+                </div>
+            </div>
+            <hr />
+        </nav>
+    </header>
+    <main></main>
+    <script src="js/phero.js"></script>
 </body>
 </html>
