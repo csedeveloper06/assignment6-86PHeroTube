@@ -38,9 +38,9 @@ const loadAllVideos = async(category_id) =>{
     data.data?.forEach((video)=>{
         const div = document.createElement('div');
         div.innerHTML = `
-            <div class="card w-60 bg-base-100 shadow-xl rounded-xl mt-24">
+            <div class="card w-60 bg-base-100 shadow-xl rounded-xl">
                 <a target="_blank" href="https://i.ibb.co/L1b6xSq/shape.jpg">
-                    <img class="w-60 h-40" src="${video?.thumbnail}" alt="" />
+                    <img class="w-60 h-40 rounded-xl" src="${video?.thumbnail}" alt="" />
                 </a>
                 <div class="card-body">
                     <div>
