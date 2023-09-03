@@ -34,6 +34,7 @@ const loadAllVideos = async(category_id) =>{
     const response = await fetch(`https://openapi.programming-hero.com/api/videos/category/${category_id}`);
     const data = await response.json();
     const cardContainer = document.getElementById('card-container');
+    cardContainer.innerHTML = '';
     //console.log(data.data);
     data.data?.forEach((video)=>{
         const div = document.createElement('div');
@@ -64,4 +65,9 @@ const loadAllVideos = async(category_id) =>{
     })
 }
 
+const searchByView = ()=>{
+    
+}
+
 loadCategory();
+loadAllVideos("1000");
