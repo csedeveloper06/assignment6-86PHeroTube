@@ -38,22 +38,23 @@ const loadAllVideos = async(category_id) =>{
     data.data?.forEach((video)=>{
         const div = document.createElement('div');
         div.innerHTML = `
-            <div class="card w-60 bg-base-100 shadow-xl rounded-3xl my-10">
+            <div class="card w-60 bg-base-100 shadow-xl rounded-xl mt-24">
                 <a target="_blank" href="https://i.ibb.co/L1b6xSq/shape.jpg">
                     <img class="w-60 h-40" src="${video?.thumbnail}" alt="" />
                 </a>
-                <div class="card-body  flex flex-col justify-center items-center">
-                    <div class="card-actions flex flex-col justify-center items-center">
-                        <div class="flex justify-items-start items-center gap-5">
-                            <img class="h-10 w-10 rounded-full" src="${}" alt="">
+                <div class="card-body">
+                    <div>
+                        <div>
+                            <img class="h-10 w-10 rounded-full" src="${video.authors[0]?.profile_picture}" alt="">
                             <h2 class="card-title text-xs">${video.title}</h2>
                         </div> 
-                        <div class="flex justify-center items-center gap-5">
-                            <h3 class="text-xs ml-[60px]">${video?.authors[0]?.profile_name}</h3>
+                        <div>
+                            <h3 class="text-xs">${video.authors[0]?.profile_name}</h3>
                             <i class="fa-solid fa-check text-white bg-blue-700 h-5 w-5 
-                                rounded-full text-xs font-bold text-center p-[3px]"></i>
+                            rounded-full text-xs font-bold text-center">${video.authors[0]?.verified ?video.authors[0].verified:" "}</i>
+                            
                         </div>
-                        <p class="text-xs text-left">${video?.others?.views}</p>
+                        <p class="text-xs text-left">${video.others?.views} views</p>
                     </div>
                 </div>
             </div>
